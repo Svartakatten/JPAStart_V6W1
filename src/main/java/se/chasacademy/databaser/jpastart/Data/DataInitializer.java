@@ -32,7 +32,6 @@ public class DataInitializer implements CommandLineRunner {
     public void run(String... args) throws Exception {
         System.out.println("Startar datainitiering");
 
-        // teachers
         Teacher teacher1 = new Teacher("Magister Haddock", "haddock@sea.com");
         Teacher teacher2 = new Teacher("Professor Kalkyl", "kalkyl@science.com");
 

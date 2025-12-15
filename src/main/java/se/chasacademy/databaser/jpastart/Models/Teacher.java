@@ -1,4 +1,4 @@
-package se.chasacademy.databaser.jpastart.models;
+package se.chasacademy.databaser.jpastart.Models;
 
 import jakarta.persistence.*;
 
@@ -15,6 +15,13 @@ public class Teacher {
 
     @OneToMany(mappedBy = "teacher")
     private List<Course> courses = new ArrayList<>();
+
+    public Teacher() {}
+
+    public Teacher(String email, String name) {
+        this.email = email;
+        this.name = name;
+    }
 
     public Long getId() {
         return id;

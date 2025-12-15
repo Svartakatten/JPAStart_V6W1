@@ -25,6 +25,10 @@ public class Course {
     )
     private List<Student> students = new ArrayList<>();
 
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "teacher_id")
+    private Teacher teacher;
+
     public Course() {}
 
     public Course(String title, String courseCode, Teacher teacher) {

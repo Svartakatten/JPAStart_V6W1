@@ -8,7 +8,7 @@ import java.util.ArrayList;
 @Entity
 public class Teacher {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
@@ -16,7 +16,7 @@ public class Teacher {
     @Column(unique = true)
     private String email;
 
-    @OneToMany(mappedBy = "teacher")
+    @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL)
     private List<Course> courses = new ArrayList<>();
 
     public Teacher() {}
